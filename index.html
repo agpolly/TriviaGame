@@ -7,7 +7,7 @@
   <title>Trivia Game</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -21,23 +21,37 @@
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
     <div class="row" id="header" align="center">
       <div class="col-md-12"><p>Wizarding World Trivia</p>
     </div>
   </div>
 
+   <br>
+   <br>
+
+    <div class="row" id="start" align="center">
+      <div class="col-md-12"><button id="btn1" onClick="appear()" onClick="Timer()" class="btn btn-info">Accio Quiz!</button>
+    </div>
+  </div>
+
   <br>
 
-  <div class="row" id="timer" align="center">
-    <div class="col-md-12">Time Remaining: </div>
+<section id="quiz">
+  <div id="results" align="center">Score:</div>
+
+  <br>
+  <br>
+
+  <div class="row" id="time-remain" align="center">
+    <div class="col-md-12">Time Remaining: <p id="timer"></div>
   </div>
 
   <br>
   <br>
 
   <div class="row questions" align="center">
-    <div class="col-md-12">Who was the half-blood prince?</div>
+    <div class="col-md-12">1. Who was the half-blood prince?</div>
   </div>
 
   <br>
@@ -56,7 +70,7 @@
   <br>
 
  <div class="row questions" align="center">
-    <div class="col-md-12">What does the spell alohomora do?</div>
+    <div class="col-md-12">2. What does the spell alohomora do?</div>
   </div>
 
   <br>
@@ -64,10 +78,10 @@
    <div class="row">
     <div class="col-md-12">
       <ul class="answers" align="center">
-        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Make things levitate</label><br/>
-        <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Shine a light</label><br/>
-        <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Repair things</label><br/>
-        <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Open doors</label><br/>
+        <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">Make things levitate</label><br/>
+        <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">Shine a light</label><br/>
+        <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Repair things</label><br/>
+        <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">Open doors</label><br/>
       </ul>
     </div>
    </div>
@@ -75,7 +89,7 @@
      <br>
 
       <div class="row questions" align="center">
-        <div class="col-md-12">What is the name of the house that Luna Lovegood is in?</div>
+        <div class="col-md-12">3. What is the name of the house that Luna Lovegood is in?</div>
       </div>
 
   <br>
@@ -83,10 +97,10 @@
    <div class="row">
     <div class="col-md-12">
       <ul class="answers" align="center">
-        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Ravenclaw</label><br/>
-        <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Slytherin</label><br/>
-        <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Hufflepuff</label><br/>
-        <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Gryffindor</label><br/>
+        <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">Ravenclaw</label><br/>
+        <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">Slytherin</label><br/>
+        <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">Hufflepuff</label><br/>
+        <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">Gryffindor</label><br/>
       </ul>
     </div>
    </div>
@@ -94,7 +108,7 @@
         <br>
 
       <div class="row questions" align="center">
-        <div class="col-md-12">What is the name of Harry's pet owl?</div>
+        <div class="col-md-12">4. What is the name of Harry's pet owl?</div>
       </div>
 
   <br>
@@ -102,18 +116,25 @@
    <div class="row">
     <div class="col-md-12">
       <ul class="answers" align="center">
-        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Crookshanks</label><br/>
-        <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Fang</label><br/>
-        <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Hedwig</label><br/>
-        <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Scabbers</label><br/>
+        <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">Crookshanks</label><br/>
+        <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">Fang</label><br/>
+        <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">Hedwig</label><br/>
+        <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">Scabbers</label><br/>
       </ul>
     </div>
    </div>
 
-   <div id="results" align="center">
-    Done!
-   </div>
+   <br>
+   <br>
+
+    <div class="row" id="finish" align="center">
+      <div class="col-md-12"><button id="btn2" onclick="checkAnswers()" class="btn btn-info">Mischief Managed!</button>
+    </div>
+  </div>
+
+
+ </section>
 
 </body>
-  <script src="assets/javascript/game.js"></script>
+  <script src="assets/javascript/app.js"></script>
 </html>
